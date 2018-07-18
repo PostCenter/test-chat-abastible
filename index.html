@@ -107,23 +107,23 @@
 
   </script>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '845052388872761',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v3.0'
-    });
-  };
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="378836019260812"
+  theme_color="#FF4F00"
+  logged_in_greeting="¿Quieres comprar cilindros? ¿o tienes alguna duda? ¡Estoy para ayudarte!"
+  logged_out_greeting="¿Quieres comprar cilindros? ¿o tienes alguna duda? ¡Estoy para ayudarte!">
+</div>
 
 </body>
